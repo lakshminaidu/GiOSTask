@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F23F70D12B07690100694CF0 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23F70D02B07690100694CF0 /* FilterView.swift */; };
+		F23F70D32B07D83500694CF0 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23F70D22B07D83500694CF0 /* TabButton.swift */; };
+		F23F70D52B07D85700694CF0 /* IconBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23F70D42B07D85700694CF0 /* IconBtn.swift */; };
+		F23F70D72B07D99800694CF0 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23F70D62B07D99800694CF0 /* TabbarView.swift */; };
 		F28919B32B03F58900B5E27A /* GiOSTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28919B22B03F58900B5E27A /* GiOSTaskApp.swift */; };
 		F28919B72B03F58A00B5E27A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28919B62B03F58A00B5E27A /* Assets.xcassets */; };
 		F28919BA2B03F58A00B5E27A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28919B92B03F58A00B5E27A /* Preview Assets.xcassets */; };
@@ -68,6 +71,9 @@
 
 /* Begin PBXFileReference section */
 		F23F70D02B07690100694CF0 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		F23F70D22B07D83500694CF0 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		F23F70D42B07D85700694CF0 /* IconBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBtn.swift; sourceTree = "<group>"; };
+		F23F70D62B07D99800694CF0 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		F28919AF2B03F58900B5E27A /* GiOSTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiOSTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28919B22B03F58900B5E27A /* GiOSTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiOSTaskApp.swift; sourceTree = "<group>"; };
 		F28919B62B03F58A00B5E27A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -268,6 +274,9 @@
 				F2891A1E2B05441C00B5E27A /* TextElement.swift */,
 				F23F70D02B07690100694CF0 /* FilterView.swift */,
 				F2891A2A2B07576B00B5E27A /* LoadingView.swift */,
+				F23F70D22B07D83500694CF0 /* TabButton.swift */,
+				F23F70D62B07D99800694CF0 /* TabbarView.swift */,
+				F23F70D42B07D85700694CF0 /* IconBtn.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -451,6 +460,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F23F70D72B07D99800694CF0 /* TabbarView.swift in Sources */,
+				F23F70D52B07D85700694CF0 /* IconBtn.swift in Sources */,
 				F2891A152B0542F700B5E27A /* CryptoList.swift in Sources */,
 				F2891A1B2B0543FA00B5E27A /* CryptoCell.swift in Sources */,
 				F28919E52B03F99600B5E27A /* Constants.swift in Sources */,
@@ -469,6 +480,7 @@
 				F28919F92B05418C00B5E27A /* NetworkImageView.swift in Sources */,
 				F2891A272B069CE000B5E27A /* EndPoint.swift in Sources */,
 				F2891A202B05441C00B5E27A /* SettingsButton.swift in Sources */,
+				F23F70D32B07D83500694CF0 /* TabButton.swift in Sources */,
 				F2891A142B0542F700B5E27A /* ChartView.swift in Sources */,
 				F28919F02B05402100B5E27A /* HomeView.swift in Sources */,
 				F2891A182B0542F700B5E27A /* FilterOptionView.swift in Sources */,

@@ -28,15 +28,30 @@ struct HomeView: View {
     }
     
     var homeConent: some View {
-        VStack {
-            HeaderView()
-            SearchSubHeaderView(searchTxt: $viewModel.searchText, selectedValue: $viewModel.filterOption)
+        ZStack {
+            VStack {
+                HeaderView()
+                SearchSubHeaderView(searchTxt: $viewModel.searchText,
+                                    selectedValue: $viewModel.filterOption
+                )
                 .padding(EdgeInsets(top: 20, leading: 10, bottom: 10, trailing: 10))
-            FilterOptionView(selectedOption: $viewModel.selectedOption)
-            ChartView()
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10))
-            CryptoList(cryptoArr: viewModel.cryptoData, cryptoIcons: viewModel.cryptoIcons)
-            Spacer()
+                FilterOptionView(selectedOption: $viewModel.selectedOption)
+                ChartView()
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10))
+                CryptoList(cryptoArr: viewModel.cryptoData, cryptoIcons: viewModel.cryptoIcons)
+                Spacer(minLength: 60)
+            }
+            ZStack {
+                VStack {
+                    Spacer()
+                    TabbarView()
+                }
+                VStack {
+                    Spacer()
+                    IconBtn(buttonIcon: TabBarIcons.metaverseIc.rawValue) {
+                    }
+                }
+            }
         }
         .onChange(of: viewModel.filterOption) {
             self.viewModel.changeWithFilter()

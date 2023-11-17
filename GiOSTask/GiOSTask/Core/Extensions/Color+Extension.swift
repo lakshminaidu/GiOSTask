@@ -14,4 +14,5 @@ extension Color {
     static let chartPercentageColor = Color(red: 0.00, green: 0.81, blue: 0.03)
     static let chartlineColor = Color(red: 0.00, green: 0.81, blue: 0.03)
     static let chartFillColor = Color(red: 0.36, green: 0.88, blue: 0.38)
+    static let tabDisabledColor = Color(red: 0.43, green: 0.43, blue: 0.43)
 }
