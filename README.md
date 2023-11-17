@@ -1,6 +1,6 @@
 # GiOSTask
 
-
+iOS - SwiftUI + MVVM
 
 https://github.com/lakshminaidu/GiOSTask/assets/12558090/0147ea0c-6de2-4a72-aa54-666f4c2e1843
 
