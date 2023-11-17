@@ -10,15 +10,15 @@ import SwiftUI
 struct NotificationsButton: View {
     var body: some View {
         Button(action: {
-            // TODO: Notifications button action
+            
         }) {
             ZStack(alignment: .topTrailing) {
                 VStack {
-                    Image(AppIcons.NotificationIc.rawValue)
+                    Image(AppIcons.notificationIc.rawValue)
                         .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 10))
                 }
                 VStack {
-                    Image(AppIcons.Indicator.rawValue)
+                    Image(AppIcons.indicator.rawValue)
                     
                 }
                 

@@ -9,42 +9,59 @@ import SwiftUI
 
 import SwiftUI
 
-enum TabBarIcons: String, Codable, CaseIterable {
-    case shopIc
-    case exchangeIc
-    case metaverseIc
-    case launchpadIc
-    case walletIc
+enum TabBarOption: Int, Codable, CaseIterable, Equatable {
+    case shop
+    case exchange
+    case metaverse
+    case launchpad
+    case wallet
     
-}
-
-enum TabLabels: String, CaseIterable, Codable {
-    case shopLbl = "€-Shop"
-    case ExchangeLbl = "Exchange"
-    case launchpadLbl = ""
-    case LaunchpadsLbl = "Launchpads"
-    case WalletLbl = "Wallet"
+    var title: String {
+        switch self {
+        case .shop:
+            return StringConstants.shopTabTitle
+        case .exchange:
+            return StringConstants.exchangeTabTitle
+        case .metaverse:
+            return ""
+        case .launchpad:
+            return StringConstants.launchPadsTabTitle
+        case .wallet:
+            return StringConstants.walletTabTitle
+        }
+    }
+    
+    var icon: String {
+        switch self {
+        case .shop:
+            return AppIcons.shopIc.rawValue
+        case .exchange:
+            return AppIcons.exchangeIc.rawValue
+        case .metaverse:
+            return AppIcons.metaverseIc.rawValue
+        case .launchpad:
+            return AppIcons.launchpadIc.rawValue
+        case .wallet:
+            return AppIcons.walletIc.rawValue
+        }
+    }
 }
 
 struct TabbarView: View {
-    let tabBarIconsArray = TabBarIcons.allCases.map { $0.rawValue }
-    let tabBarLblArray = TabLabels.allCases.map { $0.rawValue }
-    
     var body: some View {
         ZStack {
             HStack {
-                ForEach(0..<tabBarIconsArray.count, id: \.self) { index in
-                    Spacer()
-                    if tabBarIconsArray[index] == TabBarIcons.metaverseIc.rawValue {
-                        // This is just a dummy, we will add metaverse separately
-                        TabBtn(buttonTitle: "", buttonIcon: "", isSelected: false){
-                            
+                ForEach(TabBarOption.allCases, id: \.self) { tab in
+                    Group {
+                        Spacer()
+                        if tab == TabBarOption.metaverse {
+                            TabBtn(buttonTitle: "", buttonIcon: "", isSelected: false){}
+                        } else {
+                            TabBtn(buttonTitle: tab.title, buttonIcon: tab.icon, isSelected: tab == TabBarOption.exchange) { }
                         }
-                    }else{
-                        TabBtn(buttonTitle: tabBarLblArray[index], buttonIcon: tabBarIconsArray[index], isSelected: tabBarLblArray[index] == TabLabels.ExchangeLbl.rawValue ? true : false){
-                        }
+                        Spacer()
                     }
-                    Spacer()
+                 
                 }
             }
             .background(.black)

@@ -9,10 +9,11 @@ import SwiftUI
 import SwiftUICharts
 
 struct ChartView: View {
-    
+    var cryptoData: CryptoData
+    var cryptoIcons: [String: CryptoIconModel]
     var body: some View {
         VStack {
-            ChartInfoView()
+            ChartInfoView(cryptoData: cryptoData,cryptoIcons: cryptoIcons )
             FilledLineChart(chartData: lineChartData)
                 .frame(height: 60)
         }
@@ -22,5 +23,5 @@ struct ChartView: View {
 }
 
 #Preview {
-    ChartView()
+    ChartView(cryptoData: CryptoData.mockCoin, cryptoIcons: ["1": CryptoIconModel(logo: ""), "2": CryptoIconModel(logo: "")]).padding(.horizontal, 30)
 }

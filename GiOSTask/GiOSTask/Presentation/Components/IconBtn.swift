@@ -26,6 +26,5 @@ struct IconBtn: View {
 }
 
 #Preview {
-    IconBtn(buttonIcon: TabBarIcons.metaverseIc.rawValue){
-    }
+    IconBtn(buttonIcon: TabBarOption.metaverse.icon){}
 }

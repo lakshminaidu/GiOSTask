@@ -36,9 +36,9 @@ struct HomeView: View {
                 )
                 .padding(EdgeInsets(top: 20, leading: 10, bottom: 10, trailing: 10))
                 SliderView()
-                ChartView()
+                ChartView(cryptoData: viewModel.cryptoData.first!, cryptoIcons: viewModel.cryptoIcons)
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10))
-                CryptoList(cryptoArr: viewModel.cryptoData, cryptoIcons: viewModel.cryptoIcons)
+                CryptoList(cryptoData: viewModel.cryptoData, cryptoIcons: viewModel.cryptoIcons)
                 Spacer(minLength: 60)
             }
             ZStack {
@@ -48,7 +48,7 @@ struct HomeView: View {
                 }
                 VStack {
                     Spacer()
-                    IconBtn(buttonIcon: TabBarIcons.metaverseIc.rawValue) {
+                    IconBtn(buttonIcon: TabBarOption.metaverse.icon) {
                     }
                 }
             }

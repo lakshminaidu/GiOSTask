@@ -31,7 +31,7 @@ struct TabBtn: View {
                 }
             }
         }
-        .padding(EdgeInsets(top: buttonTitle.count > 0 ? 10: 0, leading:buttonTitle.count > 0 ? 5:0, bottom: buttonTitle.count > 0 ? 10:0, trailing: buttonTitle.count > 0 ? 5:0))
+        .padding(EdgeInsets(top: buttonTitle.count > 0 ? 10: 0, leading:buttonTitle.count > 0 ? 5 : 0, bottom: buttonTitle.count > 0 ? 10:0, trailing: buttonTitle.count > 0 ? 5 : 0))
         .background(.black)
         .buttonStyle(.borderless)
         
@@ -39,7 +39,5 @@ struct TabBtn: View {
 }
 
 #Preview {
-    TabBtn(buttonTitle: "Wallet", buttonIcon:TabBarIcons.walletIc.rawValue, isSelected: false){
-        
-    }
+    TabBtn(buttonTitle: StringConstants.walletTabTitle, buttonIcon: TabBarOption.wallet.icon, isSelected: false) { }
 }

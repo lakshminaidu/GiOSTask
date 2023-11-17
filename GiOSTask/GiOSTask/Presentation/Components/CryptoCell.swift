@@ -25,36 +25,27 @@ struct CryptoCell: View {
             VStack {
                 HStack {
                     TextElement(text: cryptoData.symbol, fontSize: 18, font: AppFont.InterBold.rawValue, alignment: .leading)
-                    
+                    Image((cryptoData.isGrowing ? AppIcons.greenChart : AppIcons.redChart).rawValue)
+                        .resizable()
+                        .frame(width: 50, height: 20)
                     Spacer()
-                    TextElement(text: "$\(getPrice()) USD", fontSize: 16, font: AppFont.InterBold.rawValue, alignment: .trailing)
+                          TextElement(text: "$\(cryptoData.getPrice()) USD", fontSize: 16, font: AppFont.InterBold.rawValue, alignment: .trailing)
                         .padding(.trailing,20)
                     
                 }
                 HStack {
                     TextElement(text: cryptoData.name, fontSize: 13, font: AppFont.InterSemiBold.rawValue, alignment: .leading)
                     Spacer()
-                    TextElement(text: String(format:"%.2f",getPercentage()), fontSize: 13, font: AppFont.InterSemiBold.rawValue, alignment: .trailing)
+                        TextElement(text: String(format:"%.2f", cryptoData.getPercentage()), fontSize: 13, font: AppFont.InterSemiBold.rawValue, alignment: .trailing)
                         .padding(.trailing,20)
-                        .foregroundColor(getPercentage() < 0 ? .red : Color.chartPercentageColor)
+                        .foregroundColor(cryptoData.getPercentage() < 0 ? .red : Color.chartPercentageColor)
                 }
             }
         }
     }
     
-    func getPercentage() -> Double {
-        guard let change = cryptoData.quote["USD"]?.percentChange24H else { return 0.0 }
-        return Double(change)
-    }
-    
-    func getPrice() -> String {
-        guard let price = cryptoData.quote["USD"]?.price else { return "" }
-        return String(format: "%.2f", price)
-        
-    }
-    
 }
 
-//#Preview {
-////    CryptoCell(icon:"",cryptoData: CryptoData())
-//}
+#Preview {
+    CryptoCell(icon: "",cryptoData: CryptoData.mockCoin).padding()
+}

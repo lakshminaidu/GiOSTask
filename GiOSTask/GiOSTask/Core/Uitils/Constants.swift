@@ -29,12 +29,19 @@ enum AppFont: String, Codable, CaseIterable {
 
 // MARK: Icons used in app
 enum AppIcons: String, CaseIterable, Codable {
-    case NotificationIc
-    case SettingIc
-    case SearchIc
-    case FilterIc
-    case Indicator
+    case notificationIc = "NotificationIc"
+    case settingIc = "SettingIc"
+    case searchIc = "SearchIc"
+    case filterIc = "FilterIc"
+    case indicator = "Indicator"
     case btcIc
+    case greenChart
+    case redChart
+    case shopIc
+    case exchangeIc
+    case metaverseIc
+    case launchpadIc
+    case walletIc
 }
 
 

@@ -14,7 +14,7 @@ struct SearchSubHeaderView: View {
         
         HStack {
             HStack {
-                Image(AppIcons.SearchIc.rawValue)
+                Image(AppIcons.searchIc.rawValue)
                     .padding(EdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 0))
                     .scaleEffect(1.2)
                 TextField("Search Cryptocurrency",text: $searchTxt )

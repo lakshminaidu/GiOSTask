@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CryptoList: View {
-    var cryptoArr: [CryptoData]
+    var cryptoData: [CryptoData]
     var cryptoIcons: [String: CryptoIconModel]
     var body: some View {
         VStack {
@@ -23,8 +23,7 @@ struct CryptoList: View {
             .padding([.bottom], 4)
             
             List {
-                ForEach(cryptoArr, id: \.id) { data in
-                    let cryptoId = data.id
+                ForEach(cryptoData, id: \.id) { data in
                     CryptoCell(icon: cryptoIcons["\(data.id)"]?.logo ?? "" , cryptoData: data)
                         .listRowSeparator(.hidden)
                 }
@@ -38,5 +37,5 @@ struct CryptoList: View {
 }
 
 #Preview {
-    CryptoList(cryptoArr: [], cryptoIcons: [:])
+    CryptoList(cryptoData: CryptoData.mockList, cryptoIcons: ["1": CryptoIconModel(logo: ""), "2": CryptoIconModel(logo: "")])
 }

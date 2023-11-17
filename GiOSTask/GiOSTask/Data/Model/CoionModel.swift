@@ -26,6 +26,21 @@ struct CryptoData: Codable {
         case symbol
         case quote
     }
+    
+    func getPercentage() -> Double {
+        guard let change = quote["USD"]?.percentChange24H else { return 0.0 }
+        return Double(change)
+    }
+    
+    func getPrice() -> String {
+        guard let price = quote["USD"]?.price else { return "" }
+        return String(format: "%.2f", price)
+    }
+    
+    var isGrowing: Bool {
+       guard let percentChange24H = quote["USD"]?.percentChange24H else { return false }
+        return percentChange24H > 0
+    }
 }
 
 
@@ -40,6 +55,10 @@ struct QuoteDetail: Codable {
         case volume24H = "volume_24h"
         case percentChange24H = "percent_change_24h"
     }
+}
+
+extension QuoteDetail {
+    var isGrowing: Bool { percentChange24H > 0 }
 }
 
 // MARK: - Status
@@ -71,4 +90,27 @@ enum APIErrorCode: Int, Codable {
     case forbidden = 403
     case tooManyRequests = 429
     case serverError = 500
+}
+
+extension CryptoData {
+    static let mockCoin: CryptoData = CryptoData(id: 1,
+                                             name: "Bitcoin",
+                                             symbol: "BTC",
+                                             quote: ["USD": QuoteDetail(price: 36382.4227,
+                                                                         volume24H: 26184010295.475838,
+                                                                         percentChange24H: -2.55499761)], 
+                                                 cmcRank: 1)
+    
+    static let mockList: [CryptoData] = [CryptoData(id: 1,
+                                             name: "Bitcoin",
+                                             symbol: "BTC",
+                                             quote: ["USD" : QuoteDetail(price: 36382.4227, volume24H: 26184010295.475838 , percentChange24H: -2.55499761)], cmcRank: 1),
+                                     CryptoData(id: 2,
+                                                name: "ABCD",
+                                                symbol: "ABC",
+                                                quote: ["USD": QuoteDetail(price: 36382.4227,
+                                                                            volume24H: 26184010295.475838,
+                                                                            percentChange24H: 2.55499761)],
+                                                cmcRank: 2)
+    ]
 }
