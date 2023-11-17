@@ -11,8 +11,8 @@ struct LoadingView: View {
     var body: some View {
         ProgressView() {
             Text("Loading...")
-                .foregroundColor(Color.blue)
-                .bold()
+                .font(Font.custom(AppFont.InterBold.rawValue, size: 14))
+                .foregroundColor(.blue)
         }
         .progressViewStyle(CircularProgressViewStyle(tint: Color.blue))
         .accessibilityLabel("LoadingView")

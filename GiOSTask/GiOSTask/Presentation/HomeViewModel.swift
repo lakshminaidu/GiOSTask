@@ -22,7 +22,6 @@ enum FilterOption: String, CaseIterable {
     @Published private (set) var cryptoData: [CryptoData] = []
     @Published private (set) var cryptoIcons: [String: CryptoIconModel] = [:]
     @Published var filterOption: String = "ALL"
-    @Published var selectedOption: Int = ProductOptions.CRYPTOCURRENCY.rawValue
     @Published var searchText: String = ""
     private (set) var cryptoDataCopy: [CryptoData] = []
     

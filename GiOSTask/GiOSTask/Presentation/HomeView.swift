@@ -35,7 +35,7 @@ struct HomeView: View {
                                     selectedValue: $viewModel.filterOption
                 )
                 .padding(EdgeInsets(top: 20, leading: 10, bottom: 10, trailing: 10))
-                FilterOptionView(selectedOption: $viewModel.selectedOption)
+                SliderView()
                 ChartView()
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10))
                 CryptoList(cryptoArr: viewModel.cryptoData, cryptoIcons: viewModel.cryptoIcons)
@@ -53,10 +53,10 @@ struct HomeView: View {
                 }
             }
         }
-        .onChange(of: viewModel.filterOption) {
+        .onChange(of: viewModel.filterOption) { newValue in
             self.viewModel.changeWithFilter()
         }
-        .onChange(of: viewModel.searchText) {
+        .onChange(of: viewModel.searchText) { newValue in
             self.viewModel.updateSearch()
         }
     }

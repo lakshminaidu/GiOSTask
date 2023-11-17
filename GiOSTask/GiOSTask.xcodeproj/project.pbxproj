@@ -74,6 +74,7 @@
 		F23F70D22B07D83500694CF0 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		F23F70D42B07D85700694CF0 /* IconBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBtn.swift; sourceTree = "<group>"; };
 		F23F70D62B07D99800694CF0 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		F23F70D82B07DF4000694CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F28919AF2B03F58900B5E27A /* GiOSTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiOSTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28919B22B03F58900B5E27A /* GiOSTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiOSTaskApp.swift; sourceTree = "<group>"; };
 		F28919B62B03F58A00B5E27A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +167,7 @@
 		F28919B12B03F58900B5E27A /* GiOSTask */ = {
 			isa = PBXGroup;
 			children = (
+				F23F70D82B07DF4000694CF0 /* Info.plist */,
 				F28919B22B03F58900B5E27A /* GiOSTaskApp.swift */,
 				F28919EE2B05400B00B5E27A /* Presentation */,
 				F28919DC2B03F5BD00B5E27A /* Data */,
@@ -652,11 +654,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GiOSTask/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GiOSTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -680,11 +684,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GiOSTask/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GiOSTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
